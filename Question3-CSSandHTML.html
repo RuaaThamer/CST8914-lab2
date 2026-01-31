@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<meta charset="utf-8">
 <head>
   <title>Question 3- CSS & HTML</title>
   <style>
     .button {
-      background-color: #4CAF50;
-      border: none;
+
+      background-color: #0b5fff;
+      border: 2px solid #4023e4;
       color: white;
       padding: 15px 32px;
       text-align: center;
@@ -15,16 +16,44 @@
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
+      border-radius: 6px;
     }
+    
+    .button:hover {
+      background-color: #4023e4;   
+      border-color: #4023e4;
+    }
+
+    .button:focus-visible {
+      outline: 3px solid #ffb300; 
+      outline-offset: 2px;
+    }
+
+    .button:active {
+      transform: translateY(1px);
+    }
+      
+    .button:disabled,
+    .button[aria-disabled="true"] {
+      background-color: #9e9e9e;
+      border-color: #9e9e9e;
+      cursor: not-allowed;
+      opacity: 0.8;
+    }
+
 
     body {
       padding: 20px;
-      background-color: #2f2f2f;
+      background-color: #9e9e9e;
     }
 
     h1, h2, p {
-      color: black;
+      color: #ffff;
     }
+
+    
+
+
   </style>
 </head>
 
@@ -34,7 +63,7 @@
 
   <p>What causes errors in HTML?</p>
 
-  <div class="button">Submit answers</div>
+  <button type="button" class="button">Submit answers</button>
 
 </body>
 

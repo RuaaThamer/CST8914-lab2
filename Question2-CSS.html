@@ -1,20 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Question 2 - CSS</title>
    <style>
-    .mainsection a {
-      text-decoration: none;
-      color: #414040;
-      outline: none;
+    
+  
+    
+  body {
+      font-family: system-ui, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f1f1f;
+      margin: 1.5rem;
     }
+    
+.page-title {
+      display: inline-flex;             
+      align-items: center;
+      gap: 0.75rem;                     
+      margin: 0 0 1rem 0;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      line-height: 1.2;
+    }
+
+
+.title-image {
+      width: 150px;                
+      height: auto;
+      border-radius: 12px;     
+      margin: 0 0 1rem 0;   
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+      object-fit: cover;
+    }
+
+    .mainsection a {
+  color: #0b5fff;                 /* accessible blue According to WCAG 2.1 (AA level) */
+  text-decoration: underline;     
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 2px;
+}
+
+.mainsection a:visited {
+  color: #6f42c1;                 /* accessible visited state According to WCAG 2.1 (AA level)*/
+}
+
+.mainsection a:hover {
+  color: #073fcc;                 /* darker for interaction According to WCAG 2.1 (AA level) */
+}
+.mainsection a {
+    color: #0b5fff;
+    text-decoration: underline;
+    outline: none; 
+  }
+
+    .mainsection a :focus-visible{
+      
+      outline: 3px solid;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
 
     
     </style>
 </head>
 <body>
 <div class="mainsection">
-<h1><img src="lab2/lab2-imageoftext.gif" alt="Shopping categories"></h1>
+
+<h1 class="page-title">
+      <img class="title-image" src="lab2/lab2-imageoftext.gif" alt="Stylized heading text" />
+      Shopping categories
+</h1>
 
 <ul>
   <li><a href="#">Animals</a></li>
